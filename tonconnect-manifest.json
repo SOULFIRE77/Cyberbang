@@ -1,10 +1,20 @@
 {
-  "manifest_version": "1",
   "name": "Cyberbang",
-  "description": "Cyberpunk RPG Game + TON Wallet + NFT",
-  "icon_url": "https://SOULFIRE77.github.io/cyberbang/icons/icon-192.png",
-  "action_url": "https://SOULFIRE77.github.io/cyberbang/",
-  "terms_url": "https://SOULFIRE77.github.io/cyberbang/terms.html",
-  "privacy_url": "https://SOULFIRE77.github.io/cyberbang/privacy.html",
-  "bridge_url": "https://bridge.tonapi.io/bridge"
-}
+  "short_name": "Cyberbang",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0f0f0f",
+  "description": "Cyberbang — криптоигра нового поколения в стиле киберпанк.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
