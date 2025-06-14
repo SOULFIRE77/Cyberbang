@@ -38,8 +38,12 @@
     }
   </style>
 </head>
-<body><img src="icons/icon-192.png" alt="Icon Test" style="width:64px; height:64px;"/>
+<body>
   <h1>Добро пожаловать в Cyberbang!</h1>
+
+  <!-- Тестовый вывод favicon-пути через <img> -->
+  <p>Тестовая иконка ниже (если видно — путь корректен):</p>
+  <img src="icons/icon-192.png" alt="Icon Test" style="width:64px; height:64px;">
 
   <!-- Контейнер для кнопки подключения TON-кошелька -->
   <div id="ton-connect"></div>
@@ -51,13 +55,11 @@
     <button class="btn">Зарегистрировать адрес в боте</button>
   </a>
 
-  <!-- Здесь можно разместить другие элементы будущего интерфейса -->
-
   <!-- Скрипт инициализации TonConnect и обработка подключения -->
   <script>
     // Инициализация TonConnect UI
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-      manifestUrl: "https://github.com/SOULFIRE77/cyberbang.git",
+      manifestUrl:https://github.com/SOULFIRE77/cyberbang/blob/main/tonconnect-manifest.json, // замени на свой URL
       buttonRootId: "ton-connect"
     });
 
@@ -72,7 +74,7 @@
           const instrEl = document.getElementById("register-instructions");
           instrEl.innerHTML = `Скопируйте команду:<br><code>/register ${account}</code>`;
           const botLink = document.getElementById("bot-link");
-          botLink.href = "https://t.me/CyberBangBOT";
+          botLink.href = "https://t.me/CyberBangBOT"; // замените на юзернейм вашего бота
           botLink.style.display = "inline-block";
         }
       } catch (err) {
