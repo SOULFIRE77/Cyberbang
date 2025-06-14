@@ -1,0 +1,4 @@
+# Игнорирование node_modules и окружений бота
+backend/telegram-bot/node_modules/
+backend/telegram-bot/.env
+.env
