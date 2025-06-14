@@ -1,0 +1,1 @@
+<!-- Подключаем TON Connect UI --> <script src="https://unpkg.com/@tonconnect/ui@latest"></script> <script> const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({ manifestUrl: "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json", buttonRootId: "ton-connect" }); </script>
