@@ -1,87 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Cyberbang</title>
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.webmanifest">
-  <!-- favicon -->
-  <link rel="icon" href="icons/icon-192.png" type="image/png">
-  <meta name="theme-color" content="#00ffff">
-  <!-- TonConnect UI -->
-  <script src="tonconnect-ui.js"></script>
-  <style>
-    body {
-      margin: 0;
-      background: #0d0d0d;
-      color: #00ffcc;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      margin-top: 40px;
-      font-size: 2em;
-    }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1.1em;
-      background: #00ffcc;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #00e6b3;
-    }
-  </style>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <script src="ton-connect-ui.js"></script>
 </head>
 <body>
-  <h1>Добро пожаловать в Cyberbang!</h1>
-
-  <!-- Контейнер для TonConnect -->
-  <div id="ton-connect" style="margin-top: 30px;"></div>
-  <!-- Покажем адрес после подключения -->
-  <div id="wallet-address" style="margin-top: 15px;"></div>
-  <!-- Инструкция для регистрации в боте -->
-  <div id="register-instructions" style="margin-top: 10px; color: #00ffcc;"></div>
-  <a id="bot-link" href="#" target="_blank" style="display:none; margin-top:10px;">
-    <button class="btn">Зарегистрировать адрес в боте</button>
-  </a>
-
-  <!-- Инициализация TonConnect -->
-  <script>
-    const manifestUrl = "https://SOULFIRE77.github.io/cyberbang/tonconnect-manifest.json";
-    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-      manifestUrl,
-      buttonRootId: "ton-connect"
-    });
-
-    async function onWalletConnected(provider) {
-      try {
-        const account = (await provider.getAccount())?.account;
-        if (account) {
-          document.getElementById("wallet-address").innerText =
-            "Подключен адрес: " + account;
-          const instrEl = document.getElementById("register-instructions");
-          instrEl.innerHTML = `Скопируйте команду:<br><code>/register ${account}</code>`;
-          const botLink = document.getElementById("bot-link");
-          botLink.href = "https://t.me/CyberBangBOT";
-          botLink.style.display = "inline-block";
-        }
-      } catch (err) {
-        console.error("Ошибка при получении адреса:", err);
-      }
-    }
-
-    tonConnectUI.onStatusChange(async (wallet) => {
-      if (wallet.connected) {
-        const provider = await tonConnectUI.connect();
-        await onWalletConnected(provider);
-      }
-    });
-  </script>
+  <h1>Добро пожаловать в Cyberbang</h1>
+  <div id="ton-connect"></div>
+  <script src="script.js"></script>
 </body>
 </html>
