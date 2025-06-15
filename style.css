@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #00ffcc;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#wallet-info {
+  margin-top: 20px;
+}
