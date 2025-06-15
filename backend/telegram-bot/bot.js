@@ -1,8 +1,8 @@
-// bot.js
+// backend/telegram-bot/bot.js
 const fs = require('fs');
 const path = require('path');
 const TelegramBot = require('node-telegram-bot-api');
-require('dotenv').config();
+require('dotenv').config();  // читает .env из этой папки
 
 const token = process.env.TELEGRAM_TOKEN;
 if (!token) {
@@ -22,7 +22,10 @@ if (fs.existsSync(dataFile)) {
 }
 
 bot.onText(/\/start/, (msg) => {
-  bot.sendMessage(msg.chat.id, 'Привет! Этот бот регистрирует твой TON-адрес. После подключения кошелька на сайте отправь сюда команду /register <адрес>.');
+  bot.sendMessage(
+    msg.chat.id,
+    'Привет! Этот бот регистрирует твой TON-адрес. После подключения кошелька на сайте отправь сюда команду /register <адрес>.'
+  );
 });
 
 bot.onText(/\/register (.+)/, (msg, match) => {
