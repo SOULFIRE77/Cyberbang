@@ -1,3 +1,10 @@
+# Telegram-бот
+backend/telegram-bot/node_modules/
+backend/telegram-bot/.env
+# Общие
+.env
 node_modules/
 dist/
-.env
+build/
+.DS_Store
+Thumbs.db
