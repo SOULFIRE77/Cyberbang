@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.TON_CONNECT_UI) {
     console.error("TonConnect UI не загружен");
