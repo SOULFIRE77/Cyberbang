@@ -1,5 +1,5 @@
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl: 'https://soulfire77.github.io/cyberbang/tonconnect-manifest.json',
+  manifestUrl: 'https://soulfire77.github.io/cyberbang/tonconnect-manifest.json'
   buttonRootId: 'ton-connect'
 });
 
