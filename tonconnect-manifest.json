@@ -1,10 +1,10 @@
 {
-  "manifest_version": 32,
+  "manifest_version": 1,
   "name": "Cyberbang",
   "description": "Cyberpunk RPG Game + TON Wallet + NFT",
   "iconUrl": "https://soulfire77.github.io/cyberbang/icons/icon-192.png",
   "actionUrl": "https://soulfire77.github.io/cyberbang/",
   "termsOfUseUrl": "https://soulfire77.github.io/cyberbang/terms.html",
-  "privacyPolicyUrl": "https://SOULFIRE77.github.io/cyberbang/privacy.html",
+  "privacyPolicyUrl": "https://soulfire77.github.io/cyberbang/privacy.html",
   "bridgeUrl": "https://bridge.tonapi.io/bridge"
 }
