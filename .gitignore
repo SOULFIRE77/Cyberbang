@@ -1,9 +1,0 @@
-# Node
-node_modules/
-dist/
-build/
-.env
-.DS_Store
-Thumbs.db
-backend/telegram-bot/node_modules/
-backend/telegram-bot/.env
