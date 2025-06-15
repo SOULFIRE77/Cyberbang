@@ -1,12 +1,21 @@
-const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl: 'https://soulfire77.github.io/cyberbang/tonconnect-manifest.json'
-  buttonRootId: 'ton-connect'
-});
-
-tonConnectUI.onStatusChange(wallet => {
-  if (wallet && wallet.account && wallet.account.address) {
-    document.getElementById("wallet-address").innerText = `Кошелек: ${wallet.account.address}`;
-    document.getElementById("bot-link").style.display = "block";
-    document.getElementById("register-instructions").innerText = "Вы подключены. Нажмите кнопку ниже, чтобы перейти в Telegram-бот.";
-  }
-});
+{
+  "manifest_version": 1,
+  "name": "Cyberbang",
+  "description": "Cyberpunk RPG Game + TON Wallet + NFT + Telegram Bot",
+  "iconUrl": "https://soulfire77.github.io/cyberbang/icons/icon-192.png",
+  "actionUrl": "https://soulfire77.github.io/cyberbang/",
+  "termsOfUseUrl": "https://soulfire77.github.io/cyberbang/terms.html",
+  "privacyPolicyUrl": "https://soulfire77.github.io/cyberbang/privacy.html",
+  "bridgeUrl": "https://bridge.tonapi.io/bridge",
+  "telegram": {
+    "bot_username": "CyberBangBOT",
+    "bot_url": "https://t.me/CyberBangBOT"
+  },
+  "wallets": [
+    {
+      "name": "TON Wallet",
+      "universalLink": "https://app.tonkeeper.com/ton-connect",
+      "bridgeUrl": "https://bridge.tonapi.io/bridge"
+    }
+  ]
+}
