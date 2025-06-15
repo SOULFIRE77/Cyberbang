@@ -1,13 +1,10 @@
 {
-  "name": "cyberbang-telegram-bot",
+  "name": "cyberbang-bot",
   "version": "1.0.0",
-  "description": "Telegram bot for Cyberbang registration",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "main": "bot.js",
   "dependencies": {
-    "node-telegram-bot-api": "^0.61.0",
-    "dotenv": "^16.0.0"
-  }
+    "dotenv": "^16.0.0",
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "scripts": { "start": "node bot.js" }
 }
