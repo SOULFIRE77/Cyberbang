@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
   const manifestUrl = "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json";
-  const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({ manifestUrl, buttonRootId: "ton-connect" });
+  const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+  manifestUrl: "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json",
+  buttonRootId: "ton-connect"
+});
 
   async function onWalletConnected(provider) {
     try {
