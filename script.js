@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error("TonConnect UI не загружен");
     return;
   }
-  const manifestUrl = "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json";
+  const manifestUrl = const manifestUrl = "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json";
   const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({ manifestUrl, buttonRootId: "ton-connect" });
   async function onWalletConnected(provider) {
     try {
