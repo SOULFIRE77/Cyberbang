@@ -1,21 +1,17 @@
-{
-  "manifest_version": 1,
-  "name": "Cyberbang",
-  "description": "Cyberpunk RPG Game + TON Wallet + NFT + Telegram Bot",
-  "iconUrl": "https://soulfire77.github.io/cyberbang/icons/icon-192.png",
-  "actionUrl": "https://soulfire77.github.io/cyberbang/",
-  "termsOfUseUrl": "https://soulfire77.github.io/cyberbang/terms.html",
-  "privacyPolicyUrl": "https://soulfire77.github.io/cyberbang/privacy.html",
-  "bridgeUrl": "https://bridge.tonapi.io/bridge",
-  "telegram": {
-    "bot_username": "CyberBangBOT",
-    "bot_url": "https://t.me/CyberBangBOT"
-  },
-  "wallets": [
-    {
-      "name": "TON Wallet",
-      "universalLink": "https://app.tonkeeper.com/ton-connect",
-      "bridgeUrl": "https://bridge.tonapi.io/bridge"
-    }
-  ]
-}
+const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+  manifestUrl: "https://soulfire77.github.io/cyberbang/manifest.json",
+  buttonRootId: "ton-connect"
+});
+
+tonConnectUI.onStatusChange(wallet => {
+  const walletDiv = document.getElementById('wallet-address');
+  const botLink = document.getElementById('bot-link');
+
+  if (wallet) {
+    walletDiv.innerText = `Кошелёк подключен: ${wallet.account.address}`;
+    botLink.style.display = "block";
+  } else {
+    walletDiv.innerText = "";
+    botLink.style.display = "none";
+  }
+});
