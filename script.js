@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error("TonConnect UI не загружен");
     return;
   }
-  // Укажи свой GitHub Pages URL
+  // Поставь здесь свой GitHub Pages URL:
   const manifestUrl = "https://SOULFIRE77.github.io/cyberbang/tonconnect-manifest.json";
   const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
     manifestUrl,
