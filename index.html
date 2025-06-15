@@ -4,87 +4,31 @@
   <meta charset="UTF-8" />
   <title>Cyberbang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- PWA-манифест -->
   <link rel="manifest" href="manifest.json" />
-
-  <!-- Фавикон для вкладки -->
   <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png" />
-
-  <!-- Тема (цвет адресной строки в мобильных браузерах) -->
   <meta name="theme-color" content="#000000" />
-
-  <!-- Подключаем TonConnect UI напрямую -->
   <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
-
   <style>
-    body {
-      margin: 0;
-      background: #0d0d0d;
-      color: #00ffcc;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      margin-top: 40px;
-      font-size: 2em;
-    }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1.1em;
-      background: #00ffcc;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #00e6b3;
-    }
-    /* Секция с иконками поддерживаемых кошельков */
-    .wallet-icons {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-    }
-    .wallet-icons img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 4px #00ffcc);
-    }
+    body { margin: 0; background: #0d0d0d; color: #00ffcc; font-family: Arial,sans-serif; text-align: center; padding: 20px; }
+    h1 { margin-top: 40px; font-size: 2em; }
+    .btn { margin-top: 20px; padding: 10px 20px; font-size: 1.1em; background: #00ffcc; border: none; border-radius: 6px; cursor: pointer; }
+    .btn:hover { background: #00e6b3; }
+    .wallet-icons { margin-top: 30px; display: flex; justify-content: center; gap: 16px; }
+    .wallet-icons img { width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 4px #00ffcc); }
   </style>
 </head>
 <body>
   <h1>Добро пожаловать в Cyberbang!</h1>
-
-  <!-- Контейнер для кнопки TonConnect -->
   <div id="ton-connect" style="margin-top: 30px;"></div>
-
-  <!-- Отображение подключённого адреса -->
   <div id="wallet-address" style="margin-top: 15px;"></div>
-
-  <!-- Инструкция для Telegram-бота -->
   <div id="register-instructions" style="margin-top: 10px; color: #00ffcc;"></div>
-
   <a id="bot-link" href="#" target="_blank" style="display:none; margin-top:10px;">
     <button class="btn">Зарегистрировать адрес в боте</button>
   </a>
-
-  <!-- Пример секции: иконки поддерживаемых кошельков -->
-  <!-- Если хочешь показать, какие кошельки поддерживаются, добавь сюда свои локальные иконки -->
   <div class="wallet-icons">
-    <!-- Иконка Tonkeeper, Tonhub и др. Если у тебя нет официальных логотипов, можно положить локально -->
-    <!-- Вот пример для TokenPocket -->
     <img src="icons/tokenpocket.png" alt="TokenPocket" title="TokenPocket">
-    <!-- Другие: помести в папку icons/, назови, например, tonkeeper.png -->
-    <!-- <img src="icons/tonkeeper.png" alt="Tonkeeper" title="Tonkeeper"> -->
-    <!-- <img src="icons/tonhub.png" alt="Tonhub" title="Tonhub"> -->
+    <!-- Другие иконки кошельков -->
   </div>
-
-  <!-- Главный скрипт -->
   <script src="script.js"></script>
 </body>
 </html>
