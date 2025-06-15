@@ -1,5 +1,7 @@
 {
+  "manifest_version": 1,
   "name": "Cyberbang",
+  "description": "Cyberpunk RPG Game + TON Wallet + NFT",
   "url": "https://soulfire77.github.io/cyberbang/",
   "iconUrl": "https://soulfire77.github.io/cyberbang/icons/icon-192.png",
   "termsOfUseUrl": "https://soulfire77.github.io/cyberbang/terms.html",
