@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error("TonConnect UI не загружен");
     return;
   }
-
-  // URL манифеста TonConnect — заменяй, если репозиторий или имя пользователя другое
-  const manifestUrl = "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json";
-
+const manifestUrl = "https://SOULFIRE77.github.io/cyberbang/tonconnect-manifest.json";  ;
   // Инициализируем TonConnectUI и указываем div с id="ton-connect" для кнопки
   const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
     manifestUrl,
