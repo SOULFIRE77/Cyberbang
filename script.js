@@ -1,30 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  if (!window.TON_CONNECT_UI) {
-    console.error("TonConnect UI не загружен");
-    return;
-  }
-  const manifestUrl = "https://soulfire77.github.io/cyberbang/tonconnect-manifest.json";
-  const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({ manifestUrl, buttonRootId: "ton-connect" });
+const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+  manifestUrl: 'https://soulfire77.github.io/cyberbang/tonconnect-manifest.json',
+  buttonRootId: 'ton-connect'
+});
 
-  async function onWalletConnected(provider) {
-    try {
-      const account = (await provider.getAccount())?.account;
-      if (account) {
-        document.getElementById("wallet-address").innerText = "Подключен адрес: " + account;
-        document.getElementById("register-instructions").innerHTML = `Скопируйте команду:<br><code>/register ${account}</code>`;
-        const botLink = document.getElementById("bot-link");
-        botLink.href = "https://t.me/CyberBangBOT";
-        botLink.style.display = "inline-block";
-      }
-    } catch (err) {
-      console.error("Ошибка при получении адреса:", err);
-    }
+tonConnectUI.onStatusChange(wallet => {
+  if (wallet && wallet.account && wallet.account.address) {
+    document.getElementById("wallet-address").innerText = `Кошелек: ${wallet.account.address}`;
+    document.getElementById("bot-link").style.display = "block";
+    document.getElementById("register-instructions").innerText = "Вы подключены. Нажмите кнопку ниже, чтобы перейти в Telegram-бот.";
   }
-
-  tonConnectUI.onStatusChange(async (wallet) => {
-    if (wallet.connected) {
-      const provider = await tonConnectUI.connect();
-      await onWalletConnected(provider);
-    }
-  });
 });
