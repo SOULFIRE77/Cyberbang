@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberbang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cyberbang</h1>
+    <button id="connect-button">🔗 Подключить TON-кошелёк</button>
+    <div id="wallet-info" style="display: none;">
+      <p><strong>Адрес:</strong> <span id="wallet-address"></span></p>
+      <p><strong>Баланс:</strong> <span id="wallet-balance"></span> TON</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@tonconnect/sdk@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>
