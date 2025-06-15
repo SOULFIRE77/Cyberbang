@@ -6,6 +6,7 @@
   <title>Cyberbang</title>
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="manifest" href="manifest.json">
+  <!-- TonConnect UI до вашего скрипта -->
   <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
   <style>
     body {
@@ -48,8 +49,11 @@
 </head>
 <body>
   <h1>Добро пожаловать в Cyberbang!</h1>
+  <!-- контейнер для кнопки TonConnect -->
   <div id="ton-connect" style="margin-top: 30px;"></div>
+  <!-- вывод адреса -->
   <div id="wallet-address" style="margin-top: 15px;"></div>
+  <!-- инструкция для бота -->
   <div id="register-instructions" style="margin-top: 10px; color: #00ffcc;"></div>
   <a id="bot-link" href="#" target="_blank" style="display:none; margin-top:10px;">
     <button class="btn">Написать боту</button>
@@ -57,6 +61,7 @@
   <div class="wallet-icons">
     <!-- <img src="icons/tokenpocket.png" alt="TokenPocket"> -->
   </div>
+  <!-- ваш скрипт после TonConnect UI -->
   <script src="script.js"></script>
 </body>
 </html>
