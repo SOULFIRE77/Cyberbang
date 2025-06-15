@@ -1,10 +1,11 @@
-// script.js: initializes TonConnect UI
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.TON_CONNECT_UI) {
-    console.error("TonConnect UI script not loaded yet");
+    console.error("TonConnect UI не загружен");
     return;
   }
-  const manifestUrl = "https://SOULFIRE77.github.io/cyberbang/tonconnect-manifest.json"; // replace if needed
+  // Укажи свой GitHub Pages URL
+  const manifestUrl = "https://SOULFIRE77.github.io/cyberbang/tonconnect-manifest.json";
   const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
     manifestUrl,
     buttonRootId: "ton-connect"
@@ -16,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (account) {
         document.getElementById("wallet-address").innerText =
           "Подключен адрес: " + account;
-        const instrEl = document.getElementById("register-instructions");
-        instrEl.innerHTML = `Скопируйте команду:<br><code>/register ${account}</code>`;
+        document.getElementById("register-instructions").innerHTML =
+          `Скопируйте команду:<br><code>/register ${account}</code>`;
         const botLink = document.getElementById("bot-link");
         botLink.href = "https://t.me/CyberBangBOT";
         botLink.style.display = "inline-block";
